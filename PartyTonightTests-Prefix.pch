@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PartyTonightTests' target in the 'PartyTonightTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCABD83D12C1A001005B6E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD83C12C1A001005B6E06 /* UIKit.framework */; };
+		FCABD83F12C1A001005B6E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD83E12C1A001005B6E06 /* Foundation.framework */; };
+		FCABD84112C1A001005B6E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD84012C1A001005B6E06 /* CoreGraphics.framework */; };
+		FCABD84612C1A001005B6E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCABD84412C1A001005B6E06 /* InfoPlist.strings */; };
+		FCABD84812C1A001005B6E06 /* PartyTonight-main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD84712C1A001005B6E06 /* PartyTonight-main.m */; };
+		FCABD84B12C1A001005B6E06 /* PartyTonightAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */; };
+		FCABD84E12C1A001005B6E06 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCABD84C12C1A001005B6E06 /* MainWindow.xib */; };
+		FCABD85112C1A001005B6E06 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD85012C1A001005B6E06 /* FirstViewController.m */; };
+		FCABD85412C1A001005B6E06 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD85312C1A001005B6E06 /* SecondViewController.m */; };
+		FCABD85712C1A001005B6E06 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCABD85512C1A001005B6E06 /* FirstView.xib */; };
+		FCABD85A12C1A002005B6E06 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCABD85812C1A002005B6E06 /* SecondView.xib */; };
+		FCABD86212C1A002005B6E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD83C12C1A001005B6E06 /* UIKit.framework */; };
+		FCABD86312C1A002005B6E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD83E12C1A001005B6E06 /* Foundation.framework */; };
+		FCABD86412C1A002005B6E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD84012C1A001005B6E06 /* CoreGraphics.framework */; };
+		FCABD86812C1A002005B6E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCABD86712C1A002005B6E06 /* InfoPlist.strings */; };
+		FCABD86A12C1A002005B6E06 /* PartyTonightTests.h in Resources */ = {isa = PBXBuildFile; fileRef = FCABD86912C1A002005B6E06 /* PartyTonightTests.h */; };
+		FCABD86C12C1A002005B6E06 /* PartyTonightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FCABD83912C1A001005B6E06 /* PartyTonight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyTonight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCABD83C12C1A001005B6E06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FCABD83E12C1A001005B6E06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FCABD84012C1A001005B6E06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FCABD84212C1A001005B6E06 /* PartyTonight-Info.plist */ = {isa = PBXFileReference; path = "PartyTonight-Info.plist"; sourceTree = "<group>"; };
+		FCABD84312C1A001005B6E06 /* PartyTonight-Prefix.pch */ = {isa = PBXFileReference; path = "PartyTonight-Prefix.pch"; sourceTree = "<group>"; };
+		FCABD84512C1A001005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FCABD84712C1A001005B6E06 /* PartyTonight-main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PartyTonight-main.m"; sourceTree = "<group>"; };
+		FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */ = {isa = PBXFileReference; path = PartyTonightAppDelegate.h; sourceTree = "<group>"; };
+		FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartyTonightAppDelegate.m; sourceTree = "<group>"; };
+		FCABD84D12C1A001005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FCABD84F12C1A001005B6E06 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		FCABD85012C1A001005B6E06 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FCABD85212C1A001005B6E06 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		FCABD85312C1A001005B6E06 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FCABD85612C1A001005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		FCABD85912C1A002005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		FCABD86112C1A002005B6E06 /* PartyTonightTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyTonightTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCABD86512C1A002005B6E06 /* PartyTonightTests-Info.plist */ = {isa = PBXFileReference; path = "PartyTonightTests-Info.plist"; sourceTree = "<group>"; };
+		FCABD86612C1A002005B6E06 /* PartyTonightTests-Prefix.pch */ = {isa = PBXFileReference; path = "PartyTonightTests-Prefix.pch"; sourceTree = "<group>"; };
+		FCABD86712C1A002005B6E06 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/PartyTonightTests/InfoPlist.strings; sourceTree = "<group>"; };
+		FCABD86912C1A002005B6E06 /* PartyTonightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartyTonightTests.h; sourceTree = "<group>"; };
+		FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartyTonightTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCABD83612C1A001005B6E06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABD83D12C1A001005B6E06 /* UIKit.framework in Frameworks */,
+				FCABD83F12C1A001005B6E06 /* Foundation.framework in Frameworks */,
+				FCABD84112C1A001005B6E06 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABD85D12C1A002005B6E06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABD86212C1A002005B6E06 /* UIKit.framework in Frameworks */,
+				FCABD86312C1A002005B6E06 /* Foundation.framework in Frameworks */,
+				FCABD86412C1A002005B6E06 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCABD82A12C1A001005B6E06 = {
+			isa = PBXGroup;
+			children = (
+				FCABD83112C1A001005B6E06 /* Classes */,
+				FCABD83212C1A001005B6E06 /* Other Sources */,
+				FCABD83312C1A001005B6E06 /* Resources */,
+				FCABD83412C1A001005B6E06 /* Frameworks */,
+				FCABD83A12C1A001005B6E06 /* Products */,
+				FCABD85B12C1A002005B6E06 /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		FCABD83112C1A001005B6E06 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */,
+				FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */,
+				FCABD84F12C1A001005B6E06 /* FirstViewController.h */,
+				FCABD85012C1A001005B6E06 /* FirstViewController.m */,
+				FCABD85212C1A001005B6E06 /* SecondViewController.h */,
+				FCABD85312C1A001005B6E06 /* SecondViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FCABD83212C1A001005B6E06 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD84312C1A001005B6E06 /* PartyTonight-Prefix.pch */,
+				FCABD84712C1A001005B6E06 /* PartyTonight-main.m */,
+				FCABD86612C1A002005B6E06 /* PartyTonightTests-Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		FCABD83312C1A001005B6E06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD84212C1A001005B6E06 /* PartyTonight-Info.plist */,
+				FCABD84412C1A001005B6E06 /* InfoPlist.strings */,
+				FCABD84C12C1A001005B6E06 /* MainWindow.xib */,
+				FCABD85512C1A001005B6E06 /* FirstView.xib */,
+				FCABD85812C1A002005B6E06 /* SecondView.xib */,
+				FCABD86512C1A002005B6E06 /* PartyTonightTests-Info.plist */,
+				FCABD86712C1A002005B6E06 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FCABD83412C1A001005B6E06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD83C12C1A001005B6E06 /* UIKit.framework */,
+				FCABD83E12C1A001005B6E06 /* Foundation.framework */,
+				FCABD84012C1A001005B6E06 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCABD83A12C1A001005B6E06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD83912C1A001005B6E06 /* PartyTonight.app */,
+				FCABD86112C1A002005B6E06 /* PartyTonightTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCABD85B12C1A002005B6E06 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD86912C1A002005B6E06 /* PartyTonightTests.h */,
+				FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCABD83812C1A001005B6E06 /* PartyTonight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCABD87112C1A002005B6E06 /* Build configuration list for PBXNativeTarget "PartyTonight" */;
+			buildPhases = (
+				FCABD83512C1A001005B6E06 /* Sources */,
+				FCABD83612C1A001005B6E06 /* Frameworks */,
+				FCABD83712C1A001005B6E06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PartyTonight;
+			productName = PartyTonight;
+			productReference = FCABD83912C1A001005B6E06 /* PartyTonight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCABD86012C1A002005B6E06 /* PartyTonightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCABD87412C1A002005B6E06 /* Build configuration list for PBXNativeTarget "PartyTonightTests" */;
+			buildPhases = (
+				FCABD85C12C1A002005B6E06 /* Sources */,
+				FCABD85D12C1A002005B6E06 /* Frameworks */,
+				FCABD85E12C1A002005B6E06 /* Resources */,
+				FCABD85F12C1A002005B6E06 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PartyTonightTests;
+			productName = PartyTonightTests;
+			productReference = FCABD86112C1A002005B6E06 /* PartyTonightTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCABD82C12C1A001005B6E06 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FCABD82F12C1A001005B6E06 /* Build configuration list for PBXProject "PartyTonight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FCABD82A12C1A001005B6E06;
+			productRefGroup = FCABD83A12C1A001005B6E06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCABD83812C1A001005B6E06 /* PartyTonight */,
+				FCABD86012C1A002005B6E06 /* PartyTonightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCABD83712C1A001005B6E06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABD84612C1A001005B6E06 /* InfoPlist.strings in Resources */,
+				FCABD84E12C1A001005B6E06 /* MainWindow.xib in Resources */,
+				FCABD85712C1A001005B6E06 /* FirstView.xib in Resources */,
+				FCABD85A12C1A002005B6E06 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABD85E12C1A002005B6E06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABD86812C1A002005B6E06 /* InfoPlist.strings in Resources */,
+				FCABD86A12C1A002005B6E06 /* PartyTonightTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FCABD85F12C1A002005B6E06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCABD83512C1A001005B6E06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABD84812C1A001005B6E06 /* PartyTonight-main.m in Sources */,
+				FCABD84B12C1A001005B6E06 /* PartyTonightAppDelegate.m in Sources */,
+				FCABD85112C1A001005B6E06 /* FirstViewController.m in Sources */,
+				FCABD85412C1A001005B6E06 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABD85C12C1A002005B6E06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABD86C12C1A002005B6E06 /* PartyTonightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCABD84412C1A001005B6E06 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCABD84512C1A001005B6E06 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FCABD84C12C1A001005B6E06 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCABD84D12C1A001005B6E06 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FCABD85512C1A001005B6E06 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCABD85612C1A001005B6E06 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		FCABD85812C1A002005B6E06 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCABD85912C1A002005B6E06 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCABD86D12C1A002005B6E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FCABD86E12C1A002005B6E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FCABD86F12C1A002005B6E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		FCABD87012C1A002005B6E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		FCABD87212C1A002005B6E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
+				INFOPLIST_FILE = "PartyTonight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FCABD87312C1A002005B6E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
+				INFOPLIST_FILE = "PartyTonight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FCABD87512C1A002005B6E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartyTonightTests-Prefix.pch";
+				INFOPLIST_FILE = "PartyTonightTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FCABD87612C1A002005B6E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartyTonightTests-Prefix.pch";
+				INFOPLIST_FILE = "PartyTonightTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		FCABD87712C1A002005B6E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = PartyTonightTests;
+			};
+			name = Debug;
+		};
+		FCABD87812C1A002005B6E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = PartyTonightTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCABD82F12C1A001005B6E06 /* Build configuration list for PBXProject "PartyTonight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABD86D12C1A002005B6E06 /* Debug */,
+				FCABD86E12C1A002005B6E06 /* Release */,
+				FCABD86F12C1A002005B6E06 /* Debug */,
+				FCABD87012C1A002005B6E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCABD87112C1A002005B6E06 /* Build configuration list for PBXNativeTarget "PartyTonight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABD87212C1A002005B6E06 /* Debug */,
+				FCABD87312C1A002005B6E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCABD87412C1A002005B6E06 /* Build configuration list for PBXNativeTarget "PartyTonightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABD87512C1A002005B6E06 /* Debug */,
+				FCABD87612C1A002005B6E06 /* Release */,
+				FCABD87712C1A002005B6E06 /* Debug */,
+				FCABD87812C1A002005B6E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCABD82C12C1A001005B6E06 /* Project object */;
+}
