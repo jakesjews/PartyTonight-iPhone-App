@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC00BACA1307A3DF00A88FFB /* PartyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00BAC91307A3DF00A88FFB /* PartyAnnotation.m */; };
+		FC3A1EA01365227D00A13127 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1E9F1365227D00A13127 /* Icon.png */; };
+		FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1EA11365228600A13127 /* Icon@2x.png */; };
+		FC67E1511375F6350047A07D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC67E1501375F6350047A07D /* iAd.framework */; };
+		FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6DBD69137631CF0017C732 /* Reachability.m */; };
+		FC6DBD6F1376369A0017C732 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6DBD6E137636990017C732 /* SystemConfiguration.framework */; };
+		FC857FB31374B55200479D72 /* 88-beer-mug.png in Resources */ = {isa = PBXBuildFile; fileRef = FC857FB21374B55200479D72 /* 88-beer-mug.png */; };
+		FC857FB51374B56300479D72 /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC857FB41374B56300479D72 /* 73-radar.png */; };
+		FC9CBB9612D13AFE00816533 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9CBB9512D13AFE00816533 /* CoreLocation.framework */; };
 		FCABD83D12C1A001005B6E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD83C12C1A001005B6E06 /* UIKit.framework */; };
 		FCABD83F12C1A001005B6E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD83E12C1A001005B6E06 /* Foundation.framework */; };
 		FCABD84112C1A001005B6E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABD84012C1A001005B6E06 /* CoreGraphics.framework */; };
@@ -24,32 +33,47 @@
 		FCABD86812C1A002005B6E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCABD86712C1A002005B6E06 /* InfoPlist.strings */; };
 		FCABD86A12C1A002005B6E06 /* PartyTonightTests.h in Resources */ = {isa = PBXBuildFile; fileRef = FCABD86912C1A002005B6E06 /* PartyTonightTests.h */; };
 		FCABD86C12C1A002005B6E06 /* PartyTonightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */; };
+		FCF0F2741339AA1400D876BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF0F2731339AA1400D876BF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC00BAC81307A3DF00A88FFB /* PartyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PartyAnnotation.h; path = "../../../Immersive Applications/PartyTonight/Classes/PartyAnnotation.h"; sourceTree = "<group>"; };
+		FC00BAC91307A3DF00A88FFB /* PartyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartyAnnotation.m; path = "../../../Immersive Applications/PartyTonight/Classes/PartyAnnotation.m"; sourceTree = "<group>"; };
+		FC3A1E9F1365227D00A13127 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FC3A1EA11365228600A13127 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		FC3A1EA31365229400A13127 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FC3A1EA5136522B300A13127 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FC67E1501375F6350047A07D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		FC6DBD68137631CF0017C732 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		FC6DBD69137631CF0017C732 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		FC6DBD6E137636990017C732 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FC857FB21374B55200479D72 /* 88-beer-mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "88-beer-mug.png"; sourceTree = "<group>"; };
+		FC857FB41374B56300479D72 /* 73-radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "73-radar.png"; sourceTree = "<group>"; };
+		FC9CBB9512D13AFE00816533 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FCABD83912C1A001005B6E06 /* PartyTonight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyTonight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABD83C12C1A001005B6E06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FCABD83E12C1A001005B6E06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCABD84012C1A001005B6E06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FCABD84212C1A001005B6E06 /* PartyTonight-Info.plist */ = {isa = PBXFileReference; path = "PartyTonight-Info.plist"; sourceTree = "<group>"; };
-		FCABD84312C1A001005B6E06 /* PartyTonight-Prefix.pch */ = {isa = PBXFileReference; path = "PartyTonight-Prefix.pch"; sourceTree = "<group>"; };
+		FCABD84212C1A001005B6E06 /* PartyTonight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PartyTonight-Info.plist"; sourceTree = "<group>"; };
+		FCABD84312C1A001005B6E06 /* PartyTonight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PartyTonight-Prefix.pch"; sourceTree = "<group>"; };
 		FCABD84512C1A001005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FCABD84712C1A001005B6E06 /* PartyTonight-main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PartyTonight-main.m"; sourceTree = "<group>"; };
-		FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */ = {isa = PBXFileReference; path = PartyTonightAppDelegate.h; sourceTree = "<group>"; };
+		FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartyTonightAppDelegate.h; sourceTree = "<group>"; };
 		FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartyTonightAppDelegate.m; sourceTree = "<group>"; };
 		FCABD84D12C1A001005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		FCABD84F12C1A001005B6E06 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		FCABD84F12C1A001005B6E06 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		FCABD85012C1A001005B6E06 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		FCABD85212C1A001005B6E06 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		FCABD85212C1A001005B6E06 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FCABD85312C1A001005B6E06 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FCABD85612C1A001005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		FCABD85912C1A002005B6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		FCABD86112C1A002005B6E06 /* PartyTonightTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyTonightTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCABD86512C1A002005B6E06 /* PartyTonightTests-Info.plist */ = {isa = PBXFileReference; path = "PartyTonightTests-Info.plist"; sourceTree = "<group>"; };
-		FCABD86612C1A002005B6E06 /* PartyTonightTests-Prefix.pch */ = {isa = PBXFileReference; path = "PartyTonightTests-Prefix.pch"; sourceTree = "<group>"; };
+		FCABD86512C1A002005B6E06 /* PartyTonightTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PartyTonightTests-Info.plist"; sourceTree = "<group>"; };
+		FCABD86612C1A002005B6E06 /* PartyTonightTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PartyTonightTests-Prefix.pch"; sourceTree = "<group>"; };
 		FCABD86712C1A002005B6E06 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/PartyTonightTests/InfoPlist.strings; sourceTree = "<group>"; };
 		FCABD86912C1A002005B6E06 /* PartyTonightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartyTonightTests.h; sourceTree = "<group>"; };
 		FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartyTonightTests.m; sourceTree = "<group>"; };
+		FCF0F2731339AA1400D876BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +81,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6DBD6F1376369A0017C732 /* SystemConfiguration.framework in Frameworks */,
+				FC67E1511375F6350047A07D /* iAd.framework in Frameworks */,
+				FCF0F2741339AA1400D876BF /* MapKit.framework in Frameworks */,
 				FCABD83D12C1A001005B6E06 /* UIKit.framework in Frameworks */,
 				FCABD83F12C1A001005B6E06 /* Foundation.framework in Frameworks */,
 				FCABD84112C1A001005B6E06 /* CoreGraphics.framework in Frameworks */,
+				FC9CBB9612D13AFE00816533 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +107,10 @@
 		FCABD82A12C1A001005B6E06 = {
 			isa = PBXGroup;
 			children = (
+				FC3A1EA5136522B300A13127 /* Default@2x.png */,
+				FC3A1EA31365229400A13127 /* Default.png */,
+				FC3A1EA11365228600A13127 /* Icon@2x.png */,
+				FC3A1E9F1365227D00A13127 /* Icon.png */,
 				FCABD83112C1A001005B6E06 /* Classes */,
 				FCABD83212C1A001005B6E06 /* Other Sources */,
 				FCABD83312C1A001005B6E06 /* Resources */,
@@ -91,12 +123,16 @@
 		FCABD83112C1A001005B6E06 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FC6DBD68137631CF0017C732 /* Reachability.h */,
+				FC6DBD69137631CF0017C732 /* Reachability.m */,
 				FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */,
 				FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */,
 				FCABD84F12C1A001005B6E06 /* FirstViewController.h */,
 				FCABD85012C1A001005B6E06 /* FirstViewController.m */,
 				FCABD85212C1A001005B6E06 /* SecondViewController.h */,
 				FCABD85312C1A001005B6E06 /* SecondViewController.m */,
+				FC00BAC81307A3DF00A88FFB /* PartyAnnotation.h */,
+				FC00BAC91307A3DF00A88FFB /* PartyAnnotation.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -114,6 +150,8 @@
 		FCABD83312C1A001005B6E06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC857FB41374B56300479D72 /* 73-radar.png */,
+				FC857FB21374B55200479D72 /* 88-beer-mug.png */,
 				FCABD84212C1A001005B6E06 /* PartyTonight-Info.plist */,
 				FCABD84412C1A001005B6E06 /* InfoPlist.strings */,
 				FCABD84C12C1A001005B6E06 /* MainWindow.xib */,
@@ -128,9 +166,13 @@
 		FCABD83412C1A001005B6E06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC6DBD6E137636990017C732 /* SystemConfiguration.framework */,
+				FC67E1501375F6350047A07D /* iAd.framework */,
+				FCF0F2731339AA1400D876BF /* MapKit.framework */,
 				FCABD83C12C1A001005B6E06 /* UIKit.framework */,
 				FCABD83E12C1A001005B6E06 /* Foundation.framework */,
 				FCABD84012C1A001005B6E06 /* CoreGraphics.framework */,
+				FC9CBB9512D13AFE00816533 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,6 +265,10 @@
 				FCABD84E12C1A001005B6E06 /* MainWindow.xib in Resources */,
 				FCABD85712C1A001005B6E06 /* FirstView.xib in Resources */,
 				FCABD85A12C1A002005B6E06 /* SecondView.xib in Resources */,
+				FC3A1EA01365227D00A13127 /* Icon.png in Resources */,
+				FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */,
+				FC857FB31374B55200479D72 /* 88-beer-mug.png in Resources */,
+				FC857FB51374B56300479D72 /* 73-radar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +308,8 @@
 				FCABD84B12C1A001005B6E06 /* PartyTonightAppDelegate.m in Sources */,
 				FCABD85112C1A001005B6E06 /* FirstViewController.m in Sources */,
 				FCABD85412C1A001005B6E06 /* SecondViewController.m in Sources */,
+				FC00BACA1307A3DF00A88FFB /* PartyAnnotation.m in Sources */,
+				FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +369,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
@@ -335,7 +383,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -358,12 +406,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -372,11 +427,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,11 +8,12 @@
 
 #import "PartyTonightAppDelegate.h"
 
+#pragma mark -
+#pragma mark PartyTonightAppDelegate
+
 @implementation PartyTonightAppDelegate
 
-
 @synthesize window;
-
 @synthesize tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
