@@ -24,18 +24,34 @@
     Reachability *reachability;
 }
 
+//The ratio picker
 @property (nonatomic,retain) IBOutlet UISegmentedControl *ratio;
+//The size picker
 @property (nonatomic,retain) IBOutlet UISegmentedControl *size;
+//The drinks picker
 @property (nonatomic,retain) IBOutlet UISegmentedControl *drinks;
+//The atmosphere picker
 @property (nonatomic,retain) IBOutlet UISegmentedControl *atmosphere;
+//The busted switch
 @property (nonatomic,retain) IBOutlet UISwitch *busted;
+//The button to rate the party
 @property (nonatomic,retain) IBOutlet UIButton *rate;
+//Location manager
 @property (nonatomic,retain) CLLocationManager *locationManager;
+//Text field to input the apartment name
 @property (nonatomic, retain) IBOutlet UITextField *apt;
 
+//Handles the rating button being pressed
 - (IBAction) buttonPressed: (id) sender;
+//Handles the user finishing editing the apartment number
 - (IBAction)textFieldDoneEditing:(id)sender;
+/*
+ Sends rating details made of |lat|, |lng|, |rating|, |bustedString| and |apartment| to the google app engine servlet 
+ */
 - (BOOL) sendRating: (NSString *) lat:(NSString *) lng:(NSString *) rating:(NSString *) bustedString:(NSString *) apartment;
+//Checks if there network is available
 - (void) checkNetworkStatus:(NSNotification *)notice;
+//Computers the parties rating based on the user's selection
+- (NSNumber *) getRating;
 
 @end

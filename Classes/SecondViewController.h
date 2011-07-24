@@ -24,15 +24,23 @@
     Reachability *reachability;
 }
 
+//The mapview that shows the parties
 @property (nonatomic, retain) IBOutlet MKMapView *partyMap;
+//Location manager
 @property (nonatomic, retain) CLLocationManager *locationManager;
-@property (nonatomic, retain) MKReverseGeocoder *reverseCoder;
+//Used to display beautiful ads for the benefit of the user
 @property (nonatomic, retain) IBOutlet ADBannerView *adBanner;
+//Whether the ad will be shown, needed when there are no available ads to display so apple doesn't
+//get pissed off
 @property (nonatomic, assign) BOOL bannerIsVisible;
 
+//Gets parties for the user's location from the Google App Engine service
 - (void) getParties;
+//If the banner loaded an ad make sure it is visible
 - (void) bannerViewDidLoadAd:(ADBannerView *)banner;
+//If the banner failed to load an ad make it invisible
 - (void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
+//Check if the network is available
 - (void) checkNetworkStatus:(NSNotification *)notice;
 
 @end

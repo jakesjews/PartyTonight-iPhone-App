@@ -13,7 +13,7 @@
 
 @implementation SecondViewController
 
-@synthesize partyMap,locationManager,reverseCoder,bannerIsVisible,adBanner;
+@synthesize partyMap,locationManager,bannerIsVisible,adBanner;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
@@ -24,27 +24,37 @@
 
 - (void) getParties
 {
+    //Get the current location
     CLLocation *curPos = self.locationManager.location;
+    
+    //Load an array from a plist file returned by the google app engine servlet.
+    //The servlet needs the users latitude and longitude to determine what parties to send
     NSArray *parties = [NSArray arrayWithContentsOfURL:
                         [NSURL URLWithString:[NSString stringWithFormat:
                         @"http://ifindparties3.appspot.com/ifindparties?lat=%@&lng=%@",
                                               [[[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue] substringToIndex:9],[[[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue] substringToIndex:9]]]];
+    //For each party make a map annotation
     for (NSArray *party in parties) {
             
+        //Need to fix this in the future so it doesn't depend on a magical order of the elements
         NSNumber *latitude = [party objectAtIndex:0];
         NSNumber *longitude = [party objectAtIndex:1];
         NSString *apartment = [party objectAtIndex:2];
         NSString *rating = [party objectAtIndex:3];
         NSNumber *busted = [party objectAtIndex:4];
             
+        //Build a coordinate for the party from its latitude and longitude
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake((CLLocationDegrees)latitude.doubleValue,((CLLocationDegrees)longitude.doubleValue)); 
             
+        //Create and add the parties annotation
         PartyAnnotation *annotation = [[[PartyAnnotation alloc] initWithCoordinate:coordinate :[busted boolValue] :rating : apartment]autorelease]; 
-            
         [partyMap addAnnotation:annotation];
     } 
 }
 
+/*
+ This is supposed to change the color of the pin and do other effects but I haven't got it working yet
+ */
 - (MKAnnotationView *)partyMap:(MKMapView *)Mv viewForAnnotation:(id<MKAnnotation>)annotation
 {
     static NSString *defaultPinID = @"party";
@@ -72,8 +82,10 @@
 }
 
 - (void) checkNetworkStatus:(NSNotification *)notice {
+    //Check if there is a network connection
     NetworkStatus internetStatus = [reachability currentReachabilityStatus];
     
+    //Alert the user if there is not network connection
     if (internetStatus == NotReachable) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection" message:@"An internet connection is not available" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
@@ -83,30 +95,35 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    //Start grabbing the current location
     [self.locationManager startUpdatingLocation];
     self.locationManager = [[[CLLocationManager alloc] init] autorelease];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     self.locationManager.delegate = self;
     [locationManager startUpdatingLocation];
     
+    //Get the current location so we can set the map view's center to it
     CLLocationCoordinate2D location = {.latitude = locationManager.location.coordinate.latitude, .longitude = locationManager.location.coordinate.longitude};
     
+    //Show a half mile region
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location, 0.5*1609.344, 0.5*1609.344);
     MKCoordinateRegion adjustedRegion = [partyMap regionThatFits:viewRegion];
     [partyMap setRegion:adjustedRegion animated:YES];
     
     partyMap.delegate = self;
     
+    //Add a monitor for the network connection
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
-    
     reachability = [[Reachability reachabilityForInternetConnection] retain];
     [reachability startNotifier];
     
+    //Get parties to fill the map
     [self getParties];
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
     
+    //If the ad banner was not visible and an ad was loaded then make the banner visible
     if (!self.bannerIsVisible) {
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         [UIView commitAnimations];
@@ -115,6 +132,8 @@
 }
 
 - (void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    
+    //If the ad banner was visible but an ad could not be loaded then make the banner invisible
     if (self.bannerIsVisible) {
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         [UIView commitAnimations];
@@ -122,19 +141,9 @@
     }
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {

@@ -16,24 +16,29 @@
     NSString *bustedString = @"";
     NSString *returnApartment;
     
+    //Show if the party was busted
     if (busted) {
         bustedString = @"BUSTED! ";
     } 
     
+    //If there is an apartment number 
     if (apartment == nil || [apartment isEqualToString:@""]) {
         returnApartment = @"";
     } else {
         returnApartment = [NSString stringWithFormat: @"Apartment: %@",apartment];
     }
     
+    //Return the subtitle in the format '[busted?] rating = [rating] Apartment: [Apartment]
     return [NSString stringWithFormat:@"%@rating = %@ %@",bustedString,rating,returnApartment];
 }
 - (NSString *)title{
     
+    //Fire up the reverse geocoder
     MKReverseGeocoder *reverseGeocoder = [[MKReverseGeocoder alloc] initWithCoordinate:coordinate];
     reverseGeocoder.delegate = self;
     [reverseGeocoder start];
     
+    //Either show the address or notify the user that the address was not found
     if (!address) {
         return @"Address Not Found";
     } else {
@@ -50,11 +55,17 @@
 	return self;
 }
 
+/*
+ Called when the reverse geocoder successfully translates coordinated
+ */
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
     address = [placemark.addressDictionary valueForKey:@"Street"];
     [geocoder release];
 }
 
+/*
+ Log the error if the reverse geocoder fails
+ */
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error {
     NSLog(@"%@",error);
 }

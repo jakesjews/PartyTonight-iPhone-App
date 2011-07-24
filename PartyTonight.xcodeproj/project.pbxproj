@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC00BACA1307A3DF00A88FFB /* PartyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00BAC91307A3DF00A88FFB /* PartyAnnotation.m */; };
 		FC3A1EA01365227D00A13127 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1E9F1365227D00A13127 /* Icon.png */; };
 		FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1EA11365228600A13127 /* Icon@2x.png */; };
 		FC67E1511375F6350047A07D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC67E1501375F6350047A07D /* iAd.framework */; };
@@ -33,12 +32,11 @@
 		FCABD86812C1A002005B6E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCABD86712C1A002005B6E06 /* InfoPlist.strings */; };
 		FCABD86A12C1A002005B6E06 /* PartyTonightTests.h in Resources */ = {isa = PBXBuildFile; fileRef = FCABD86912C1A002005B6E06 /* PartyTonightTests.h */; };
 		FCABD86C12C1A002005B6E06 /* PartyTonightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */; };
+		FCC892FB13DBD27C00DA4814 /* PartyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC892FA13DBD27C00DA4814 /* PartyAnnotation.m */; };
 		FCF0F2741339AA1400D876BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF0F2731339AA1400D876BF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC00BAC81307A3DF00A88FFB /* PartyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PartyAnnotation.h; path = "../../../Immersive Applications/PartyTonight/Classes/PartyAnnotation.h"; sourceTree = "<group>"; };
-		FC00BAC91307A3DF00A88FFB /* PartyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartyAnnotation.m; path = "../../../Immersive Applications/PartyTonight/Classes/PartyAnnotation.m"; sourceTree = "<group>"; };
 		FC3A1E9F1365227D00A13127 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FC3A1EA11365228600A13127 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		FC3A1EA31365229400A13127 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		FCABD86712C1A002005B6E06 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/PartyTonightTests/InfoPlist.strings; sourceTree = "<group>"; };
 		FCABD86912C1A002005B6E06 /* PartyTonightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartyTonightTests.h; sourceTree = "<group>"; };
 		FCABD86B12C1A002005B6E06 /* PartyTonightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartyTonightTests.m; sourceTree = "<group>"; };
+		FCC892F913DBD27C00DA4814 /* PartyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyAnnotation.h; sourceTree = "<group>"; };
+		FCC892FA13DBD27C00DA4814 /* PartyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyAnnotation.m; sourceTree = "<group>"; };
 		FCF0F2731339AA1400D876BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -123,6 +123,8 @@
 		FCABD83112C1A001005B6E06 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FCC892F913DBD27C00DA4814 /* PartyAnnotation.h */,
+				FCC892FA13DBD27C00DA4814 /* PartyAnnotation.m */,
 				FC6DBD68137631CF0017C732 /* Reachability.h */,
 				FC6DBD69137631CF0017C732 /* Reachability.m */,
 				FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */,
@@ -131,8 +133,6 @@
 				FCABD85012C1A001005B6E06 /* FirstViewController.m */,
 				FCABD85212C1A001005B6E06 /* SecondViewController.h */,
 				FCABD85312C1A001005B6E06 /* SecondViewController.m */,
-				FC00BAC81307A3DF00A88FFB /* PartyAnnotation.h */,
-				FC00BAC91307A3DF00A88FFB /* PartyAnnotation.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -238,6 +238,9 @@
 /* Begin PBXProject section */
 		FCABD82C12C1A001005B6E06 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = FCABD82F12C1A001005B6E06 /* Build configuration list for PBXProject "PartyTonight" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -308,8 +311,8 @@
 				FCABD84B12C1A001005B6E06 /* PartyTonightAppDelegate.m in Sources */,
 				FCABD85112C1A001005B6E06 /* FirstViewController.m in Sources */,
 				FCABD85412C1A001005B6E06 /* SecondViewController.m in Sources */,
-				FC00BACA1307A3DF00A88FFB /* PartyAnnotation.m in Sources */,
 				FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */,
+				FCC892FB13DBD27C00DA4814 /* PartyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,10 +370,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -381,11 +384,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -413,6 +416,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +437,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +459,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonightTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "PartyTonightTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
@@ -475,6 +481,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonightTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "PartyTonightTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
