@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */; };
+		B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */; };
 		FC3A1EA01365227D00A13127 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1E9F1365227D00A13127 /* Icon.png */; };
 		FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1EA11365228600A13127 /* Icon@2x.png */; };
 		FC67E1511375F6350047A07D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC67E1501375F6350047A07D /* iAd.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3F3AD901400AEC000699F34 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		B3F3AD921400AEC000699F34 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		FC3A1E9F1365227D00A13127 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FC3A1EA11365228600A13127 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		FC3A1EA31365229400A13127 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -104,6 +110,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3DD73BF1400B94E0007599F /* Identifier */ = {
+			isa = PBXGroup;
+			children = (
+				B3F3AD901400AEC000699F34 /* NSString+MD5Addition.h */,
+				B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */,
+				B3F3AD921400AEC000699F34 /* UIDevice+IdentifierAddition.h */,
+				B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */,
+			);
+			name = Identifier;
+			sourceTree = "<group>";
+		};
+		B3DD73C01400B97B0007599F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCABD84F12C1A001005B6E06 /* FirstViewController.h */,
+				FCABD85012C1A001005B6E06 /* FirstViewController.m */,
+				FCABD85212C1A001005B6E06 /* SecondViewController.h */,
+				FCABD85312C1A001005B6E06 /* SecondViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B3DD73C11400B9BD0007599F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				FC6DBD68137631CF0017C732 /* Reachability.h */,
+				FC6DBD69137631CF0017C732 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		FCABD82A12C1A001005B6E06 = {
 			isa = PBXGroup;
 			children = (
@@ -123,16 +160,13 @@
 		FCABD83112C1A001005B6E06 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B3DD73BF1400B94E0007599F /* Identifier */,
 				FCC892F913DBD27C00DA4814 /* PartyAnnotation.h */,
 				FCC892FA13DBD27C00DA4814 /* PartyAnnotation.m */,
-				FC6DBD68137631CF0017C732 /* Reachability.h */,
-				FC6DBD69137631CF0017C732 /* Reachability.m */,
+				B3DD73C11400B9BD0007599F /* Reachability */,
 				FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */,
 				FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */,
-				FCABD84F12C1A001005B6E06 /* FirstViewController.h */,
-				FCABD85012C1A001005B6E06 /* FirstViewController.m */,
-				FCABD85212C1A001005B6E06 /* SecondViewController.h */,
-				FCABD85312C1A001005B6E06 /* SecondViewController.m */,
+				B3DD73C01400B97B0007599F /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -313,6 +347,8 @@
 				FCABD85412C1A001005B6E06 /* SecondViewController.m in Sources */,
 				FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */,
 				FCC892FB13DBD27C00DA4814 /* PartyAnnotation.m in Sources */,
+				B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */,
+				B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +452,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,7 +473,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

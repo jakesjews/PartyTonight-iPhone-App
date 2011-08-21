@@ -15,6 +15,8 @@
 
 @synthesize partyMap,locationManager,bannerIsVisible,adBanner;
 
+NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
 {
@@ -24,32 +26,48 @@
 
 - (void) getParties
 {
-    //Get the current location
-    CLLocation *curPos = self.locationManager.location;
-    
-    //Load an array from a plist file returned by the google app engine servlet.
-    //The servlet needs the users latitude and longitude to determine what parties to send
-    NSArray *parties = [NSArray arrayWithContentsOfURL:
-                        [NSURL URLWithString:[NSString stringWithFormat:
-                        @"http://ifindparties3.appspot.com/ifindparties?lat=%@&lng=%@",
-                                              [[[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue] substringToIndex:9],[[[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue] substringToIndex:9]]]];
-    //For each party make a map annotation
-    for (NSArray *party in parties) {
+    //Retrieve the parties on a background thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        //Get the current location
+        CLLocation *curPos = self.locationManager.location;
+        
+        //Latitude
+        NSString *lat = [[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue];
+        if ([lat length] > 9) { lat = [ lat substringToIndex:9]; }
+        
+        //Longitude
+        NSString *lng = [[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue];
+        if ([lng length] > 9) { lng = [ lng substringToIndex:9]; } 
+
+        //Load an array from a plist file returned by the google app engine servlet.
+        //The servlet needs the users latitude and longitude to determine what parties to send
+        NSArray *parties = [NSArray arrayWithContentsOfURL:
+                            [NSURL URLWithString:[NSString stringWithFormat:
+                                                  @"%@?lat=%@&lng=%@", serviceURL, lat,lng]]];
+        
+        //Run this on a the main thread so the UI can be updated
+        dispatch_async(dispatch_get_main_queue(), ^{
             
-        //Need to fix this in the future so it doesn't depend on a magical order of the elements
-        NSNumber *latitude = [party objectAtIndex:0];
-        NSNumber *longitude = [party objectAtIndex:1];
-        NSString *apartment = [party objectAtIndex:2];
-        NSString *rating = [party objectAtIndex:3];
-        NSNumber *busted = [party objectAtIndex:4];
-            
-        //Build a coordinate for the party from its latitude and longitude
-        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake((CLLocationDegrees)latitude.doubleValue,((CLLocationDegrees)longitude.doubleValue)); 
-            
-        //Create and add the parties annotation
-        PartyAnnotation *annotation = [[[PartyAnnotation alloc] initWithCoordinate:coordinate :[busted boolValue] :rating : apartment]autorelease]; 
-        [partyMap addAnnotation:annotation];
-    } 
+            //For each party make a map annotation
+            for (NSArray *party in parties) {
+                
+                //Need to fix this in the future so it doesn't depend on a magical order of the elements
+                NSNumber *latitude = [party objectAtIndex:0];
+                NSNumber *longitude = [party objectAtIndex:1];
+                NSString *apartment = [party objectAtIndex:2];
+                NSString *rating = [party objectAtIndex:3];
+                NSNumber *busted = [party objectAtIndex:4];
+                
+                //Build a coordinate for the party from its latitude and longitude
+                CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake((CLLocationDegrees)latitude.doubleValue,((CLLocationDegrees)longitude.doubleValue)); 
+                
+                //Create and add the parties annotation
+                PartyAnnotation *annotation = [[[PartyAnnotation alloc] initWithCoordinate:coordinate :[busted boolValue] :rating : apartment]autorelease]; 
+                [partyMap addAnnotation:annotation];
+            } 
+        });
+    });
 }
 
 /*

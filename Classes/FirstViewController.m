@@ -8,44 +8,59 @@
 
 #import "FirstViewController.h"
 #import "Reachability.h"
+#import "UIDevice+IdentifierAddition.h"
 
 @implementation FirstViewController
 
 @synthesize apt,ratio,size,drinks,atmosphere,rate,locationManager,busted;
 
+static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
+
 - (IBAction) buttonPressed:(id)sender 
 {
     int bust = 0;
     
-    //Grab the current location
-    CLLocation *curPos = self.locationManager.location;
-    
-    UIAlertView *alert;
-    
-    //Latitude
-    NSString *latString = [[[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue] substringToIndex:9];
-    //Longitude
-    NSString *lngString = [[[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue] substringToIndex:9];
-    //Busted
-    NSString *bustedString = [[NSNumber numberWithInt:bust] stringValue];
-    //Rating
-    NSString *ratingString = [[self getRating] stringValue];
-
     if (busted.on) {
         bust = 1;
     }
     
-    //Try sending the rating and notify the user if the rating submission was successfull
-    if ([self sendRating:latString :lngString :ratingString :bustedString :[apt text]]) {
-        alert = [[UIAlertView alloc] initWithTitle:@"Rating submited" message:@"Your rating has been stored" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    //Grab the current location
+    CLLocation *curPos = self.locationManager.location;
+    
+    //Latitude
+    NSString *latString = [[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue];
+    if ([latString length] > 9) { latString = [ latString substringToIndex:9]; }
+    
+    //Longitude
+    NSString *lngString = [[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue];
+    if ([lngString length] > 9) { lngString = [ lngString substringToIndex:9]; } 
+    
+    //Busted
+    NSString *bustedString = [[NSNumber numberWithInt:bust] stringValue];
+    //Rating
+    NSString *ratingString = [[self getRating] stringValue];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-    } else {
-        alert = [[UIAlertView alloc] initWithTitle:@"" message:@"You have already rated this party" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    }
-
-    //Show the results of the rating
-    [alert show];
-    [alert release];
+        BOOL rated = [self sendRating:latString :lngString :ratingString :bustedString :[apt text]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            UIAlertView *alert;
+            
+            //Try sending the rating and notify the user if the rating submission was successfull
+            if (rated) {
+                alert = [[UIAlertView alloc] initWithTitle:@"Rating submited" message:@"Your rating has been stored" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+            } else {
+                alert = [[UIAlertView alloc] initWithTitle:@"" message:@"You have already rated this party" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            }
+            
+            //Show the results of the rating
+            [alert show];
+            [alert release];
+        });
+    });
 }
 
 - (NSNumber *) getRating {
@@ -82,17 +97,17 @@
 }
 
 - (BOOL) sendRating: (NSString *) lat:(NSString *) lng:(NSString *) rating:(NSString *) bustedString:(NSString *) apartment {
-    
+
+    //A unique identifier for the iPhone
+    NSString *idString = [[[UIDevice currentDevice] uniqueDeviceIdentifier]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+
     NSHTTPURLResponse *response;
     NSError *error;
-    
-    //A unique identifier for the iPhone
-    NSString *idString = [[UIDevice currentDevice].uniqueIdentifier stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
     
     // The address that will be used to send the party rating
     // The base url is http://ifindparties3.appspot.com/ifindparties
     // The parameters are rating, busted, lat, lng, apt, and id
-    NSString *putRequest = [NSString stringWithFormat:@"http://ifindparties3.appspot.com/ifindparties?rating=%@&busted=%@&lat=%@&lng=%@&apt=%@&id=%@",rating,bustedString,lat,lng,apartment,idString];
+    NSString *putRequest = [NSString stringWithFormat:@"%@rating=%@&busted=%@&lat=%@&lng=%@&apt=%@&id=%@",serviceURL,rating,bustedString,lat,lng,apartment,idString];
 
     //Make the put request string into a url
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:putRequest]];
@@ -100,12 +115,12 @@
     //Set the header
     [request setHTTPMethod:@"PUT"];
     [request setValue:[NSString stringWithFormat:@"%d",[putRequest length]] forHTTPHeaderField:@"Content-length"];
-    
-    //Send dat shit
+
+    //Send the request
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     [request release];
     
-    //If the response was created then the party was stored
+    //If the response code is 201 then the party was stored
     if (response.statusCode == 201) {
         return true;
     } else { //If the response was accepted then the party has already been rated
