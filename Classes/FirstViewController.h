@@ -25,21 +25,21 @@
 }
 
 //The ratio picker
-@property (nonatomic,retain) IBOutlet UISegmentedControl *ratio;
+@property (nonatomic,strong) IBOutlet UISegmentedControl *ratio;
 //The size picker
-@property (nonatomic,retain) IBOutlet UISegmentedControl *size;
+@property (nonatomic,strong) IBOutlet UISegmentedControl *size;
 //The drinks picker
-@property (nonatomic,retain) IBOutlet UISegmentedControl *drinks;
+@property (nonatomic,strong) IBOutlet UISegmentedControl *drinks;
 //The atmosphere picker
-@property (nonatomic,retain) IBOutlet UISegmentedControl *atmosphere;
+@property (nonatomic,strong) IBOutlet UISegmentedControl *atmosphere;
 //The busted switch
-@property (nonatomic,retain) IBOutlet UISwitch *busted;
+@property (nonatomic,strong) IBOutlet UISwitch *busted;
 //The button to rate the party
-@property (nonatomic,retain) IBOutlet UIButton *rate;
+@property (nonatomic,strong) IBOutlet UIButton *rate;
 //Location manager
-@property (nonatomic,retain) CLLocationManager *locationManager;
+@property (nonatomic,strong) CLLocationManager *locationManager;
 //Text field to input the apartment name
-@property (nonatomic, retain) IBOutlet UITextField *apt;
+@property (nonatomic, strong) IBOutlet UITextField *apt;
 
 //Handles the rating button being pressed
 - (IBAction) buttonPressed: (id) sender;

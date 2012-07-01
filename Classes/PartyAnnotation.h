@@ -24,9 +24,9 @@
 //Whether the party is busted
 @property (assign) BOOL busted;
 //The apartment number of the party
-@property (nonatomic,retain) NSString *apartment;
+@property (nonatomic,strong) NSString *apartment;
 //The rating of the party
-@property (nonatomic,retain) NSString *rating;
+@property (nonatomic,strong) NSString *rating;
 
 /*
  Creates a party annotation for the location |coordinate| and sets whether it is busted to |busted|,

@@ -15,7 +15,7 @@
 
 @synthesize partyMap,locationManager,bannerIsVisible,adBanner;
 
-NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
+NSString * const serviceURL = @"http://partytonightapp.appspot.com/parties?";
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
@@ -33,18 +33,18 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
         CLLocation *curPos = self.locationManager.location;
         
         //Latitude
-        NSString *lat = [[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue];
+        NSString *lat = [@(curPos.coordinate.latitude) stringValue];
         if ([lat length] > 9) { lat = [ lat substringToIndex:9]; }
         
         //Longitude
-        NSString *lng = [[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue];
+        NSString *lng = [@(curPos.coordinate.longitude) stringValue];
         if ([lng length] > 9) { lng = [ lng substringToIndex:9]; } 
 
         //Load an array from a plist file returned by the google app engine servlet.
         //The servlet needs the users latitude and longitude to determine what parties to send
         NSArray *parties = [NSArray arrayWithContentsOfURL:
                             [NSURL URLWithString:[NSString stringWithFormat:
-                                                  @"%@?lat=%@&lng=%@", serviceURL, lat,lng]]];
+                                                  @"%@lat=%@&lng=%@", serviceURL, lat,lng]]];
         
         //Run this on a the main thread so the UI can be updated
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -63,7 +63,7 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
                 CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake((CLLocationDegrees)latitude.doubleValue,((CLLocationDegrees)longitude.doubleValue)); 
                 
                 //Create and add the parties annotation
-                PartyAnnotation *annotation = [[[PartyAnnotation alloc] initWithCoordinate:coordinate :[busted boolValue] :rating : apartment]autorelease]; 
+                PartyAnnotation *annotation = [[PartyAnnotation alloc] initWithCoordinate:coordinate :[busted boolValue] :rating : apartment]; 
                 [partyMap addAnnotation:annotation];
             } 
         });
@@ -83,7 +83,7 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
         
         if (pinView == nil)
         {
-            pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID]autorelease];
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID];
         } else {
             pinView.annotation = annotation;
         }
@@ -107,7 +107,6 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
     if (internetStatus == NotReachable) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection" message:@"An internet connection is not available" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-        [alert release];
     }
 }
 
@@ -115,7 +114,7 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
     
     //Start grabbing the current location
     [self.locationManager startUpdatingLocation];
-    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+    self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     self.locationManager.delegate = self;
     [locationManager startUpdatingLocation];
@@ -132,7 +131,7 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
     
     //Add a monitor for the network connection
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
-    reachability = [[Reachability reachabilityForInternetConnection] retain];
+    reachability = [Reachability reachabilityForInternetConnection];
     [reachability startNotifier];
     
     //Get parties to fill the map
@@ -173,11 +172,5 @@ NSString * const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
     self.partyMap = nil;
 }
 
-- (void)dealloc {
-    [partyMap release];
-    [locationManager release];
-    [adBanner release];
-    [super dealloc];
-}
 
 @end

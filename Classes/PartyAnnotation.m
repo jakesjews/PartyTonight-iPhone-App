@@ -50,8 +50,8 @@
 - (id)initWithCoordinate:(CLLocationCoordinate2D) cor: (BOOL) bust: (NSString *) rate: (NSString *) apt{
 	coordinate = cor;
     busted = bust;
-    rating = [rate retain];
-    apartment = [apt retain];
+    rating = rate;
+    apartment = apt;
 	return self;
 }
 
@@ -60,7 +60,6 @@
  */
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
     address = [placemark.addressDictionary valueForKey:@"Street"];
-    [geocoder release];
 }
 
 /*
@@ -70,10 +69,5 @@
     NSLog(@"%@",error);
 }
 
-- (void)dealloc {
-    [rating release];
-    [apartment release];
-    [super dealloc];
-}
 
 @end

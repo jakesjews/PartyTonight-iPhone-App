@@ -25,11 +25,11 @@
 }
 
 //The mapview that shows the parties
-@property (nonatomic, retain) IBOutlet MKMapView *partyMap;
+@property (nonatomic, strong) IBOutlet MKMapView *partyMap;
 //Location manager
-@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 //Used to display beautiful ads for the benefit of the user
-@property (nonatomic, retain) IBOutlet ADBannerView *adBanner;
+@property (nonatomic, strong) IBOutlet ADBannerView *adBanner;
 //Whether the ad will be shown, needed when there are no available ads to display so apple doesn't
 //get pissed off
 @property (nonatomic, assign) BOOL bannerIsVisible;

@@ -30,11 +30,5 @@
     // Save data if appropriate.
 }
 
-- (void)dealloc {
-
-    [window release];
-    [tabBarController release];
-    [super dealloc];
-}
 
 @end

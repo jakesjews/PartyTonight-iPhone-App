@@ -14,7 +14,7 @@
 
 @synthesize apt,ratio,size,drinks,atmosphere,rate,locationManager,busted;
 
-static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindparties?";
+static NSString *const serviceURL = @"http://partytonightapp.appspot.com/parties?";
 
 - (IBAction) buttonPressed:(id)sender 
 {
@@ -28,15 +28,15 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
     CLLocation *curPos = self.locationManager.location;
     
     //Latitude
-    NSString *latString = [[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue];
+    NSString *latString = [@(curPos.coordinate.latitude) stringValue];
     if ([latString length] > 9) { latString = [ latString substringToIndex:9]; }
     
     //Longitude
-    NSString *lngString = [[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue];
+    NSString *lngString = [@(curPos.coordinate.longitude) stringValue];
     if ([lngString length] > 9) { lngString = [ lngString substringToIndex:9]; } 
     
     //Busted
-    NSString *bustedString = [[NSNumber numberWithInt:bust] stringValue];
+    NSString *bustedString = [@(bust) stringValue];
     //Rating
     NSString *ratingString = [[self getRating] stringValue];
     
@@ -58,7 +58,6 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
             
             //Show the results of the rating
             [alert show];
-            [alert release];
         });
     });
 }
@@ -93,7 +92,7 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
         rating -= 15;
     }
     
-    return [NSNumber numberWithInt: rating];
+    return @(rating);
 }
 
 - (BOOL) sendRating: (NSString *) lat:(NSString *) lng:(NSString *) rating:(NSString *) bustedString:(NSString *) apartment {
@@ -113,12 +112,11 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:putRequest]];
     
     //Set the header
-    [request setHTTPMethod:@"PUT"];
+    [request setHTTPMethod:@"POST"];
     [request setValue:[NSString stringWithFormat:@"%d",[putRequest length]] forHTTPHeaderField:@"Content-length"];
 
     //Send the request
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    [request release];
     
     //If the response code is 201 then the party was stored
     if (response.statusCode == 201) {
@@ -142,7 +140,6 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
     if (internetStatus == NotReachable) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection" message:@"An internet connection is not available" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-        [alert release];
     }
 }
 
@@ -153,13 +150,13 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
 - (void)viewWillAppear:(BOOL)animated {
     //Start getting the users location
     [self.locationManager startUpdatingLocation];
-    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+    self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationManager startUpdatingLocation];
     
     //Set an observer to keep track of the network status
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
-    reachability = [[Reachability reachabilityForInternetConnection] retain];
+    reachability = [Reachability reachabilityForInternetConnection];
     [reachability startNotifier];
 }
 
@@ -178,14 +175,6 @@ static NSString *const serviceURL = @"http://ifindparties3.appspot.com/ifindpart
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [ratio release];
-    [size release];
-    [drinks release];
-    [atmosphere release];
-    [rate release];
-    [busted release];
-    [apt release];
-    [super dealloc];
 }
 
 @end

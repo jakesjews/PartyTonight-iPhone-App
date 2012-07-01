@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */; };
-		B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */; };
+		B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FC3A1EA01365227D00A13127 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1E9F1365227D00A13127 /* Icon.png */; };
 		FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1EA11365228600A13127 /* Icon@2x.png */; };
 		FC67E1511375F6350047A07D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC67E1501375F6350047A07D /* iAd.framework */; };
-		FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6DBD69137631CF0017C732 /* Reachability.m */; };
+		FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6DBD69137631CF0017C732 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FC6DBD6F1376369A0017C732 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6DBD6E137636990017C732 /* SystemConfiguration.framework */; };
 		FC857FB31374B55200479D72 /* 88-beer-mug.png in Resources */ = {isa = PBXBuildFile; fileRef = FC857FB21374B55200479D72 /* 88-beer-mug.png */; };
 		FC857FB51374B56300479D72 /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC857FB41374B56300479D72 /* 73-radar.png */; };
@@ -273,7 +273,7 @@
 		FCABD82C12C1A001005B6E06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = FCABD82F12C1A001005B6E06 /* Build configuration list for PBXProject "PartyTonight" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -402,14 +402,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -418,12 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -446,18 +446,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,17 +468,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BEA00F94-DDF4-41BA-90F1-27BA72D49662";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -495,7 +495,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonightTests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PartyTonightTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
@@ -517,7 +517,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyTonightTests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PartyTonightTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
