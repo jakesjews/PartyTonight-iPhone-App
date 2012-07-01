@@ -3,7 +3,7 @@
 //  PartyTonight
 //
 //  Created by Jacob Jewell on 2/13/11.
-//  Copyright 2011 Immersive Applications. All rights reserved.
+//  Copyright 2012 Immersive Applications. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

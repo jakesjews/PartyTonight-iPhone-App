@@ -3,7 +3,7 @@
 //  PartyTonight
 //
 //  Created by Jacob Jewell on 12/21/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 Immersive Applications. All rights reserved.
 //
 
 #import "SecondViewController.h"
