@@ -29,7 +29,7 @@
     }
     
     //Return the subtitle in the format '[busted?] rating = [rating] Apartment: [Apartment]
-    return [NSString stringWithFormat:@"%@rating = %@ %@",bustedString,rating,returnApartment];
+    return [NSString stringWithFormat:@"%@Rating = %@ %@",bustedString,rating,returnApartment];
 }
 - (NSString *)title{
     
