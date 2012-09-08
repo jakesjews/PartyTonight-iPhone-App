@@ -1,1 +1,3 @@
-iPhone app that allows you to rate parties based on your location
+iPhone app that allows you to rate parties based on your location.
+
+Code for the Google App Engine backend can be found at https://github.com/jakesjews/PartyTonight
