@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C6DDDA163DCF3B0008C81E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C6DDD9163DCF3B0008C81E /* Default-568h@2x.png */; };
 		B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FC3A1EA01365227D00A13127 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1E9F1365227D00A13127 /* Icon.png */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16C6DDD9163DCF3B0008C81E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B3F3AD901400AEC000699F34 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
 		B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		B3F3AD921400AEC000699F34 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		FCABD82A12C1A001005B6E06 = {
 			isa = PBXGroup;
 			children = (
+				16C6DDD9163DCF3B0008C81E /* Default-568h@2x.png */,
 				FC3A1EA5136522B300A13127 /* Default@2x.png */,
 				FC3A1EA31365229400A13127 /* Default.png */,
 				FC3A1EA11365228600A13127 /* Icon@2x.png */,
@@ -306,6 +309,7 @@
 				FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */,
 				FC857FB31374B55200479D72 /* 88-beer-mug.png in Resources */,
 				FC857FB51374B56300479D72 /* 73-radar.png in Resources */,
+				16C6DDDA163DCF3B0008C81E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

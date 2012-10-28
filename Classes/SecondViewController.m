@@ -53,11 +53,11 @@ NSString * const serviceURL = @"http://partytonightapp.appspot.com/parties?";
             for (NSArray *party in parties) {
                 
                 //Need to fix this in the future so it doesn't depend on a magical order of the elements
-                NSNumber *latitude = [party objectAtIndex:0];
-                NSNumber *longitude = [party objectAtIndex:1];
-                NSString *apartment = [party objectAtIndex:2];
-                NSString *rating = [party objectAtIndex:3];
-                NSNumber *busted = [party objectAtIndex:4];
+                NSNumber *latitude = party[0];
+                NSNumber *longitude = party[1];
+                NSString *apartment = party[2];
+                NSString *rating = party[3];
+                NSNumber *busted = party[4];
                 
                 //Build a coordinate for the party from its latitude and longitude
                 CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake((CLLocationDegrees)latitude.doubleValue,((CLLocationDegrees)longitude.doubleValue)); 
