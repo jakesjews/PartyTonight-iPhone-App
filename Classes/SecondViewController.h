@@ -18,7 +18,6 @@
 {
     IBOutlet MKMapView *partyMap;
     CLLocationManager *locationManager;
-    BOOL adBannerViewIsVisible;
     ADBannerView *adBanner;
     BOOL bannerIsVisible;
     Reachability *reachability;
