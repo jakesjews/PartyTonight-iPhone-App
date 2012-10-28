@@ -17,6 +17,17 @@
 		<string>Icon.png</string>
 		<string>Icon@2x.png</string>
 	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>Icon.png</string>
+				<string>Icon@2x.png</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>PartyTonight</string>
 	<key>CFBundleInfoDictionaryVersion</key>
