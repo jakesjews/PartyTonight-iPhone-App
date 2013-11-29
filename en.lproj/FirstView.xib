@@ -49,9 +49,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22">
-                    <rect key="frame" x="146" y="495" width="154" height="53"/>
+                    <rect key="frame" x="136" y="495" width="154" height="53"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="35"/>
                     <state key="normal" title="Rate It!">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
