@@ -13,14 +13,13 @@
 
 @implementation SecondViewController
 
-@synthesize partyMap,locationManager,bannerIsVisible,adBanner;
+@synthesize partyMap,locationManager;
 
 NSString * const serviceURL = @"http://partytonightapp.appspot.com/parties?";
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
 {
-    adBanner.delegate = self;
     [super viewDidLoad];
 }
 
@@ -138,26 +137,6 @@ NSString * const serviceURL = @"http://partytonightapp.appspot.com/parties?";
     [self getParties];
 }
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    
-    //If the ad banner was not visible and an ad was loaded then make the banner visible
-    if (!self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        [UIView commitAnimations];
-        self.bannerIsVisible = YES;
-    }
-}
-
-- (void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    
-    //If the ad banner was visible but an ad could not be loaded then make the banner invisible
-    if (self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        [UIView commitAnimations];
-        self.bannerIsVisible = NO;
-    }
-}
-
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -165,7 +144,6 @@ NSString * const serviceURL = @"http://partytonightapp.appspot.com/parties?";
 
 - (void)viewDidUnload {
     // Release any retained subviews of the main view.
-    [self setAdBanner:nil];
     [super viewDidUnload];
     [self.locationManager stopUpdatingLocation];
     self.locationManager = nil;
