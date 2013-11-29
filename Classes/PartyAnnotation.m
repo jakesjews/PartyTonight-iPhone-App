@@ -9,7 +9,7 @@
 #import "PartyAnnotation.h"
 
 @implementation PartyAnnotation
-@synthesize coordinate,busted,rating,apartment;
+@synthesize coordinate, busted, rating, apartment, geocoder;
 
 - (NSString *)subtitle{
     
@@ -33,41 +33,38 @@
 }
 - (NSString *)title{
     
-    //Fire up the reverse geocoder
-    MKReverseGeocoder *reverseGeocoder = [[MKReverseGeocoder alloc] initWithCoordinate:coordinate];
-    reverseGeocoder.delegate = self;
-    [reverseGeocoder start];
-    
     //Either show the address or notify the user that the address was not found
     if (!address) {
-        return @"Address Not Found";
+        return @"Address Not Available";
     } else {
-        return [NSString stringWithFormat:@"%@",address];
+        return [NSString stringWithFormat:@"%@", address];
     }
     
 }
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D) cor: (BOOL) bust: (NSString *) rate: (NSString *) apt{
-	coordinate = cor;
-    busted = bust;
-    rating = rate;
-    apartment = apt;
-	return self;
-}
+- (id)initWithCoordinate:(CLLocationCoordinate2D) cor :(BOOL)bust :(NSString *) rate :(NSString *) apt {
+    if ( self = [super init] ) {
+        geocoder = [[CLGeocoder alloc] init];
+        coordinate = cor;
+        busted = bust;
+        rating = rate;
+        apartment = apt;
 
-/*
- Called when the reverse geocoder successfully translates coordinated
- */
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
-    address = [placemark.addressDictionary valueForKey:@"Street"];
-}
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:cor.latitude longitude:cor.longitude];
 
-/*
- Log the error if the reverse geocoder fails
- */
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error {
-    NSLog(@"%@",error);
-}
+        [[self geocoder] reverseGeocodeLocation:location completionHandler: ^void (NSArray *placemarks, NSError *error) {
+            if (error != nil) {
+                NSLog(@"%@",error);
+            }
+            else if (placemarks.count > 0) {
+                MKPlacemark *placemark = placemarks[0];
+                address = [placemark.addressDictionary valueForKey:@"Street"];
+            }
+        }];
+        
+    }
 
+    return self;
+}
 
 @end

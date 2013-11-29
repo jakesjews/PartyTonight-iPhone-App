@@ -95,7 +95,7 @@ static NSString *const serviceURL = @"http://partytonightapp.appspot.com/parties
     return @(rating);
 }
 
-- (BOOL) sendRating: (NSString *) lat:(NSString *) lng:(NSString *) rating:(NSString *) bustedString:(NSString *) apartment {
+- (BOOL) sendRating: (NSString *) lat :(NSString *) lng :(NSString *) rating :(NSString *) bustedString :(NSString *) apartment {
 
     //A unique identifier for the iPhone
     NSString *idString = [[[UIDevice currentDevice] uniqueDeviceIdentifier]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];

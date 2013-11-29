@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>994F7941-4538-4EC2-B373-E3FEA34DF888</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PartyTonight</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7FD5BD2E-D08E-4B68-9D56-DA09DA4B2EED</key>
+		<string>https://github.com/jakesjews/PartyTonight-iPhone-App.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PartyTonight.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7FD5BD2E-D08E-4B68-9D56-DA09DA4B2EED</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jakesjews/PartyTonight-iPhone-App.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7FD5BD2E-D08E-4B68-9D56-DA09DA4B2EED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7FD5BD2E-D08E-4B68-9D56-DA09DA4B2EED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PartyTonight-iPhone-App</string>
+		</dict>
+	</array>
+</dict>
+</plist>

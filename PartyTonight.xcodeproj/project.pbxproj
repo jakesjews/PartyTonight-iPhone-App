@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		16C6DDDA163DCF3B0008C81E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C6DDD9163DCF3B0008C81E /* Default-568h@2x.png */; };
-		B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A38E56E1F0FD41B79966AA3A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 938F7BE5EA444333A26B41C0 /* libPods.a */; };
 		FC3A1EA01365227D00A13127 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1E9F1365227D00A13127 /* Icon.png */; };
 		FC3A1EA21365228600A13127 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A1EA11365228600A13127 /* Icon@2x.png */; };
 		FC67E1511375F6350047A07D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC67E1501375F6350047A07D /* iAd.framework */; };
-		FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6DBD69137631CF0017C732 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FC6DBD6F1376369A0017C732 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6DBD6E137636990017C732 /* SystemConfiguration.framework */; };
 		FC857FB31374B55200479D72 /* 88-beer-mug.png in Resources */ = {isa = PBXBuildFile; fileRef = FC857FB21374B55200479D72 /* 88-beer-mug.png */; };
 		FC857FB51374B56300479D72 /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC857FB41374B56300479D72 /* 73-radar.png */; };
@@ -40,18 +38,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16356E3918491392007E3FA8 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		16C6DDD9163DCF3B0008C81E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B3F3AD901400AEC000699F34 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
-		B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
-		B3F3AD921400AEC000699F34 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
-		B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
+		938F7BE5EA444333A26B41C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D014C450F347EAB313849D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FC3A1E9F1365227D00A13127 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FC3A1EA11365228600A13127 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		FC3A1EA31365229400A13127 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FC3A1EA5136522B300A13127 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FC67E1501375F6350047A07D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		FC6DBD68137631CF0017C732 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		FC6DBD69137631CF0017C732 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FC6DBD6E137636990017C732 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FC857FB21374B55200479D72 /* 88-beer-mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "88-beer-mug.png"; sourceTree = "<group>"; };
 		FC857FB41374B56300479D72 /* 73-radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "73-radar.png"; sourceTree = "<group>"; };
@@ -96,6 +91,7 @@
 				FCABD83F12C1A001005B6E06 /* Foundation.framework in Frameworks */,
 				FCABD84112C1A001005B6E06 /* CoreGraphics.framework in Frameworks */,
 				FC9CBB9612D13AFE00816533 /* CoreLocation.framework in Frameworks */,
+				A38E56E1F0FD41B79966AA3A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,17 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B3DD73BF1400B94E0007599F /* Identifier */ = {
-			isa = PBXGroup;
-			children = (
-				B3F3AD901400AEC000699F34 /* NSString+MD5Addition.h */,
-				B3F3AD911400AEC000699F34 /* NSString+MD5Addition.m */,
-				B3F3AD921400AEC000699F34 /* UIDevice+IdentifierAddition.h */,
-				B3F3AD931400AEC000699F34 /* UIDevice+IdentifierAddition.m */,
-			);
-			name = Identifier;
-			sourceTree = "<group>";
-		};
 		B3DD73C01400B97B0007599F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,15 +117,6 @@
 				FCABD85312C1A001005B6E06 /* SecondViewController.m */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		B3DD73C11400B9BD0007599F /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				FC6DBD68137631CF0017C732 /* Reachability.h */,
-				FC6DBD69137631CF0017C732 /* Reachability.m */,
-			);
-			name = Reachability;
 			sourceTree = "<group>";
 		};
 		FCABD82A12C1A001005B6E06 = {
@@ -157,16 +133,15 @@
 				FCABD83412C1A001005B6E06 /* Frameworks */,
 				FCABD83A12C1A001005B6E06 /* Products */,
 				FCABD85B12C1A002005B6E06 /* Tests */,
+				E4D014C450F347EAB313849D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		FCABD83112C1A001005B6E06 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B3DD73BF1400B94E0007599F /* Identifier */,
 				FCC892F913DBD27C00DA4814 /* PartyAnnotation.h */,
 				FCC892FA13DBD27C00DA4814 /* PartyAnnotation.m */,
-				B3DD73C11400B9BD0007599F /* Reachability */,
 				FCABD84912C1A001005B6E06 /* PartyTonightAppDelegate.h */,
 				FCABD84A12C1A001005B6E06 /* PartyTonightAppDelegate.m */,
 				B3DD73C01400B97B0007599F /* Controllers */,
@@ -203,6 +178,7 @@
 		FCABD83412C1A001005B6E06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16356E3918491392007E3FA8 /* GLKit.framework */,
 				FC6DBD6E137636990017C732 /* SystemConfiguration.framework */,
 				FC67E1501375F6350047A07D /* iAd.framework */,
 				FCF0F2731339AA1400D876BF /* MapKit.framework */,
@@ -210,6 +186,7 @@
 				FCABD83E12C1A001005B6E06 /* Foundation.framework */,
 				FCABD84012C1A001005B6E06 /* CoreGraphics.framework */,
 				FC9CBB9512D13AFE00816533 /* CoreLocation.framework */,
+				938F7BE5EA444333A26B41C0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCABD87112C1A002005B6E06 /* Build configuration list for PBXNativeTarget "PartyTonight" */;
 			buildPhases = (
+				FDF48DE4FC874AF3A4B999C2 /* Check Pods Manifest.lock */,
 				FCABD83512C1A001005B6E06 /* Sources */,
 				FCABD83612C1A001005B6E06 /* Frameworks */,
 				FCABD83712C1A001005B6E06 /* Resources */,
+				75099FB309B84E12A863A115 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,7 +255,7 @@
 		FCABD82C12C1A001005B6E06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FCABD82F12C1A001005B6E06 /* Build configuration list for PBXProject "PartyTonight" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -325,6 +304,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		75099FB309B84E12A863A115 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FCABD85F12C1A002005B6E06 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +332,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		FDF48DE4FC874AF3A4B999C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,10 +358,7 @@
 				FCABD84B12C1A001005B6E06 /* PartyTonightAppDelegate.m in Sources */,
 				FCABD85112C1A001005B6E06 /* FirstViewController.m in Sources */,
 				FCABD85412C1A001005B6E06 /* SecondViewController.m in Sources */,
-				FC6DBD6A137631CF0017C732 /* Reachability.m in Sources */,
 				FCC892FB13DBD27C00DA4814 /* PartyAnnotation.m in Sources */,
-				B3F3AD941400AEC000699F34 /* NSString+MD5Addition.m in Sources */,
-				B3F3AD951400AEC000699F34 /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,15 +411,15 @@
 		FCABD86D12C1A002005B6E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -421,13 +427,12 @@
 		FCABD86E12C1A002005B6E06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -447,9 +452,9 @@
 		};
 		FCABD87212C1A002005B6E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D014C450F347EAB313849D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -459,9 +464,9 @@
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "34AB17A8-6110-4F57-8DD8-2AB24A013190";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -471,9 +476,9 @@
 		};
 		FCABD87312C1A002005B6E06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D014C450F347EAB313849D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -482,9 +487,9 @@
 				GCC_PREFIX_HEADER = "PartyTonight-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "PartyTonight-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "34AB17A8-6110-4F57-8DD8-2AB24A013190";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

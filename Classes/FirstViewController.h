@@ -48,7 +48,7 @@
 /*
  Sends rating details made of |lat|, |lng|, |rating|, |bustedString| and |apartment| to the google app engine servlet 
  */
-- (BOOL) sendRating: (NSString *) lat:(NSString *) lng:(NSString *) rating:(NSString *) bustedString:(NSString *) apartment;
+- (BOOL) sendRating: (NSString *) lat :(NSString *) lng :(NSString *) rating :(NSString *) bustedString :(NSString *) apartment;
 //Checks if there network is available
 - (void) checkNetworkStatus:(NSNotification *)notice;
 //Computers the parties rating based on the user's selection

@@ -12,7 +12,7 @@
 /**
  An single map point annotation representing a party on the mapview
  */
-@interface PartyAnnotation : NSObject <MKAnnotation, MKReverseGeocoderDelegate> {
+@interface PartyAnnotation : NSObject <MKAnnotation> {
     CLLocationCoordinate2D coordinate;
     NSString *address;
     BOOL busted;
@@ -28,11 +28,13 @@
 //The rating of the party
 @property (nonatomic,strong) NSString *rating;
 
+@property (nonatomic, strong) CLGeocoder *geocoder;
+
 /*
  Creates a party annotation for the location |coordinate| and sets whether it is busted to |busted|,
  its rating to |rating| and its apartment number to |apt| 
  */
-- (id)initWithCoordinate:(CLLocationCoordinate2D) coordinate: (BOOL) Busted: (NSString *) rating: (NSString *) apt;
+- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate :(BOOL)bust :(NSString *)rating :(NSString *)apt;
 /*
  Gets the subtitle for the party annotation
  The subtitle shows if the apartment number, whether the party was busted, and the rating for the party
