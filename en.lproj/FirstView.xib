@@ -19,48 +19,25 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1" userLabel="Rate The Party">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Atmosphere" lineBreakMode="tailTruncation" minimumFontSize="10" id="11">
-                    <rect key="frame" x="108" y="140" width="104" height="38.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Drinks" lineBreakMode="tailTruncation" minimumFontSize="10" id="12">
-                    <rect key="frame" x="136" y="234.5" width="53" height="24.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Size" lineBreakMode="tailTruncation" minimumFontSize="10" id="13">
-                    <rect key="frame" x="144" y="321" width="36" height="24.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="16" userLabel="atmosphere">
-                    <rect key="frame" x="7" y="178" width="307" height="44"/>
+                    <rect key="frame" x="7" y="202" width="307" height="29"/>
                     <segments>
                         <segment title="Cool"/>
                         <segment title="Not Cool"/>
                     </segments>
                 </segmentedControl>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="17" userLabel="drinks">
-                    <rect key="frame" x="7" y="266" width="307" height="44"/>
+                    <rect key="frame" x="7" y="295" width="307" height="29"/>
                     <segments>
                         <segment title="Keg"/>
                         <segment title="BYOB"/>
                     </segments>
                 </segmentedControl>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="18" userLabel="size">
-                    <rect key="frame" x="7" y="352.5" width="307" height="44"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" id="18" userLabel="size">
+                    <rect key="frame" x="7" y="389" width="307" height="29"/>
                     <segments>
                         <segment title="Big"/>
                         <segment title="Medium"/>
@@ -68,31 +45,22 @@
                     </segments>
                 </segmentedControl>
                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="20" userLabel="busted">
-                    <rect key="frame" x="53" y="437" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <rect key="frame" x="34" y="506" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </switch>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Busted!" lineBreakMode="tailTruncation" minimumFontSize="10" id="21">
-                    <rect key="frame" x="34" y="417" width="58" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22">
-                    <rect key="frame" x="137" y="422" width="152" height="52"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="146" y="495" width="154" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                     <state key="normal" title="Rate It!">
-                        <color key="titleColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="28"/>
                     </connections>
                 </button>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="23">
-                    <rect key="frame" x="7" y="84" width="307" height="44"/>
+                    <rect key="frame" x="7" y="108" width="307" height="29"/>
                     <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
                     <segments>
                         <segment title="+ Girls"/>
@@ -100,16 +68,14 @@
                         <segment title="="/>
                     </segments>
                 </segmentedControl>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ratio" lineBreakMode="tailTruncation" minimumFontSize="10" id="24">
-                    <rect key="frame" x="137" y="49" width="46" height="32.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ratio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ehF-qf-Wij">
+                    <rect key="frame" x="140" y="79" width="41" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="38" userLabel="apt">
-                    <rect key="frame" x="107" y="8" width="207" height="31"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                    <rect key="frame" x="107" y="25" width="207" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits"/>
@@ -117,17 +83,36 @@
                         <action selector="textFieldDoneEditing:" destination="-1" eventType="editingDidEndOnExit" id="42"/>
                     </connections>
                 </textField>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Apartment" lineBreakMode="tailTruncation" minimumFontSize="10" id="39">
-                    <rect key="frame" x="13" y="11" width="86" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.24313725489999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Atmosphere" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gm7-iL-enu">
+                    <rect key="frame" x="114" y="173" width="93" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Drinks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I61-B2-PhA">
+                    <rect key="frame" x="136" y="266" width="49" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Nr-zN-LxD">
+                    <rect key="frame" x="144" y="360" width="33" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apartment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6kJ-1V-ozS">
+                    <rect key="frame" x="12" y="30" width="81" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7I2-Ql-eLW">
+                    <rect key="frame" x="31" y="471" width="55" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
 </document>
