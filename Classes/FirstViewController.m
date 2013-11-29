@@ -113,7 +113,7 @@ static NSString *const serviceURL = @"http://partytonightapp.appspot.com/parties
     
     //Set the header
     [request setHTTPMethod:@"POST"];
-    [request setValue:[NSString stringWithFormat:@"%d",[putRequest length]] forHTTPHeaderField:@"Content-length"];
+    [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[putRequest length]] forHTTPHeaderField:@"Content-length"];
 
     //Send the request
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
